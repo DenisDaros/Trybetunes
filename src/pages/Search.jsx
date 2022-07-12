@@ -77,8 +77,8 @@ class Search extends React.Component {
                   {retornoArtista.length > 0
                   && <p>{`Resultado de álbuns de: ${nomeArtista}`}</p>}
                   {
-                    retornoArtista.map((index) => (
-                      <li key={ index.artistId }>
+                    retornoArtista.map((index, chave) => (
+                      <li key={ chave }>
                         <Link
                           data-testid={ `link-to-album-${index.collectionId}` }
                           to={ `/album/${index.collectionId}` }
